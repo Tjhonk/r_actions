@@ -518,11 +518,17 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>package &#39;librarian&#39; successfully unpacked and MD5 sums checked
+</pre></div>
+</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  These packages will be installed:
 
   &#39;dosearch&#39;
 
   It may take some time.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>package &#39;dosearch&#39; successfully unpacked and MD5 sums checked
 </pre></div>
 </div>
 </div>
@@ -664,7 +670,9 @@ p_{Y(d)}(y) := p(y: do(d)) = \sum_{x}\left(p(x)p(y|d,x)\right)
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(y|x2,x3,d) 
-\sum_{x2,x3}\left(p(x2,x3)p(y|x2,x3,d)\right) 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\sum_{x2,x3}\left(p(x2,x3)p(y|x2,x3,d)\right) 
 </pre></div>
 </div>
 </div>
@@ -708,8 +716,12 @@ p_{Y(d) }(y) :=  p(y do(d)) = \sum_{x2,x3}\left(p(x_2,x_3)p(y|x_2,x_3,d)\right).
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(m|d) 
-\sum_{d}\left(p(d)p(y|d,m)\right) 
-\sum_{m}\left(p(m|d)\sum_{d}\left(p(d)p(y|d,m)\right)\right) 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\sum_{d}\left(p(d)p(y|d,m)\right) 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>\sum_{m}\left(p(m|d)\sum_{d}\left(p(d)p(y|d,m)\right)\right) 
 </pre></div>
 </div>
 </div>
@@ -759,8 +771,12 @@ p_{Y(d)}(y) := p(y|do(d)) = \sum_{m}\left(p(m|d)\sum_{d}\left(p(d)p(y|d,m)\right
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p(m|d) 
-The query p(y|do(m)) is non-identifiable. 
-The query p(y|do(d)) is non-identifiable. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The query p(y|do(m)) is non-identifiable. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The query p(y|do(d)) is non-identifiable. 
 </pre></div>
 </div>
 </div>

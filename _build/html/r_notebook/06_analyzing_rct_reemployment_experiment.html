@@ -611,6 +611,22 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in file(file, &quot;rt&quot;):
+&quot;cannot open URL &#39;https://github.com/d2cml-ai/14.388_r/raw/main/Data/penn_jae.dat&#39;: HTTP status was &#39;404 Not Found&#39;&quot;
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">):</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">connection</span> <span class="n">to</span> <span class="s1">&#39;https://github.com/d2cml-ai/14.388_r/raw/main/Data/penn_jae.dat&#39;</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">as_tibble</span><span class="p">(</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;https://github.com/d2cml-ai/14.388_r/raw/main/Data/penn_jae.dat&quot;</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">))</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;https://github.com/d2cml-ai/14.388_r/raw/main/Data/penn_jae.dat&quot;</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="n">header</span> <span class="o">=</span> <span class="n">T</span><span class="p">)</span>   <span class="c1"># at line 60 of file C:/Users/runneradmin/AppData/Local/Temp/Rtmp0WK7Ml/R.INSTALL1b0c6592180c/tibble/R/as_tibble.R</span>
+<span class="mi">3</span><span class="o">.</span> <span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -815,7 +831,7 @@ agegt54:husd         -0.07421790  0.06125689 -1.2116 0.2257288
 durable:lusd         -0.05517360  0.04342256 -1.2706 0.2039228    
 durable:husd         -0.00016918  0.05273588 -0.0032 0.9974404    
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre></div>
 </div>
 </div>
@@ -1053,7 +1069,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
    Estimate. Std. Error t value Pr(&gt;|t|)  
 T4  -0.07889    0.03555  -2.219   0.0265 *
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre></div>
 </div>
 </div>
@@ -1069,7 +1085,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">-0.0755005494164911</div></div>
+<div class="output text_html">-0.0755005494164947</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

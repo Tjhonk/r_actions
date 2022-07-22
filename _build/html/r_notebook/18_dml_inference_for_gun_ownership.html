@@ -637,11 +637,39 @@ linear model</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>New names:
-<span class=" -Color -Color-Cyan">•</span> `` -&gt; `...1`
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>package &#39;librarian&#39; successfully unpacked and MD5 sums checked
 </pre></div>
 </div>
-<div class="output text_html">3900</div></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>Error in open.connection(structure(4L, class = c(&quot;curl&quot;, &quot;connection&quot;), conn_id = &lt;pointer: 0x000000000000063e&gt;), : HTTP error 404.
+Traceback:
+
+1. read_csv(&quot;https://raw.githubusercontent.com/d2cml-ai/14.388_R/main/Data/gun_clean.csv&quot;, 
+ .     show_col_types = F)
+2. vroom::vroom(file, delim = &quot;,&quot;, col_names = col_names, col_types = col_types, 
+ .     col_select = {
+ .         {
+ .             col_select
+ .         }
+ .     }, id = id, .name_repair = name_repair, skip = skip, n_max = n_max, 
+ .     na = na, quote = quote, comment = comment, skip_empty_rows = skip_empty_rows, 
+ .     trim_ws = trim_ws, escape_double = TRUE, escape_backslash = FALSE, 
+ .     locale = locale, guess_max = guess_max, show_col_types = show_col_types, 
+ .     progress = progress, altrep = lazy, num_threads = num_threads)
+3. vroom_(file, delim = delim %||% col_types$delim, col_names = col_names, 
+ .     col_types = col_types, id = id, skip = skip, col_select = col_select, 
+ .     name_repair = .name_repair, na = na, quote = quote, trim_ws = trim_ws, 
+ .     escape_double = escape_double, escape_backslash = escape_backslash, 
+ .     comment = comment, skip_empty_rows = skip_empty_rows, locale = locale, 
+ .     guess_max = guess_max, n_max = n_max, altrep = vroom_altrep(altrep), 
+ .     num_threads = num_threads, progress = progress)
+4. (function (con, ...) 
+ . UseMethod(&quot;open&quot;))(structure(4L, class = c(&quot;curl&quot;, &quot;connection&quot;
+ . ), conn_id = &lt;pointer: 0x000000000000063e&gt;), &quot;rb&quot;)
+5. open.connection(structure(4L, class = c(&quot;curl&quot;, &quot;connection&quot;), conn_id = &lt;pointer: 0x000000000000063e&gt;), 
+ .     &quot;rb&quot;)
+</pre></div>
+</div>
+</div>
 </div>
 <section id="preprocessing">
 <h3><span class="section-number">18.1.1. </span>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">#</a></h3>
@@ -772,13 +800,13 @@ linear model</p>
 .dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
 .dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
 .dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
-</style><dl class=dl-inline><dt>2.5 %</dt><dd>0.155238182025456</dd><dt>97.5 %</dt><dd>0.40937075124097</dd></dl>
+</style><dl class=dl-inline><dt>2.5 %</dt><dd>0.155238182025455</dd><dt>97.5 %</dt><dd>0.409370751240969</dd></dl>
 </div><div class="output text_html"><style>
 .dl-inline {width: auto; margin:0; padding: 0}
 .dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
 .dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
 .dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
-</style><dl class=dl-inline><dt>Estimate</dt><dd>0.282304466633213</dd><dt>Cluster s.e.</dt><dd>0.0648107978379222</dd><dt>t value</dt><dd>4.35582458557593</dd><dt>Pr(&gt;|t|)</dt><dd>1.35976701238175e-05</dd></dl>
+</style><dl class=dl-inline><dt>Estimate</dt><dd>0.282304466633212</dd><dt>Cluster s.e.</dt><dd>0.0648107978379222</dd><dt>t value</dt><dd>4.35582458557592</dd><dt>Pr(&gt;|t|)</dt><dd>1.35976701238181e-05</dd></dl>
 </div></div>
 </div>
 <p>The point estimate is <span class="math notranslate nohighlight">\(0.282\)</span> with the confidence interval ranging from 0.155 to 0.41. This
@@ -799,9 +827,7 @@ to a trend then the predicted gun homicide rate goes up by 0.28%, without contro
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in chol.default(mat, pivot = TRUE, tol = tol):
 “the matrix is either rank-deficient or indefinite”
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in chol.default(mat, pivot = TRUE, tol = tol):
+Warning message in chol.default(mat, pivot = TRUE, tol = tol):
 “the matrix is either rank-deficient or indefinite”
 </pre></div>
 </div>
@@ -810,13 +836,13 @@ to a trend then the predicted gun homicide rate goes up by 0.28%, without contro
 .dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
 .dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
 .dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
-</style><dl class=dl-inline><dt>2.5 %</dt><dd>0.0878159355841431</dd><dt>97.5 %</dt><dd>0.293473517509719</dd></dl>
+</style><dl class=dl-inline><dt>2.5 %</dt><dd>0.0878159355821646</dd><dt>97.5 %</dt><dd>0.2934735175048</dd></dl>
 </div><div class="output text_html"><style>
 .dl-inline {width: auto; margin:0; padding: 0}
 .dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
 .dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
 .dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
-</style><dl class=dl-inline><dt>Estimate</dt><dd>0.190644726546931</dd><dt>Cluster s.e.</dt><dd>0.0524475581607146</dd><dt>t value</dt><dd>3.63495905686858</dd><dt>Pr(&gt;|t|)</dt><dd>0.000281786722027629</dd></dl>
+</style><dl class=dl-inline><dt>Estimate</dt><dd>0.190644726543482</dd><dt>Cluster s.e.</dt><dd>0.0524475581599647</dd><dt>t value</dt><dd>3.63495905685479</dd><dt>Pr(&gt;|t|)</dt><dd>0.000281786722042642</dd></dl>
 </div></div>
 </div>
 <p>After controlling for a rich set of characteristics, the point estimate of gun ownership reduces to <span class="math notranslate nohighlight">\(0.19\)</span>.</p>
@@ -919,7 +945,7 @@ estimate of <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fold: 1  2  3  4  5  6  7  8  9  10  
-coef (se) = 0.222944 (0.0570327)
+coef (se) = 0.222807 (0.0570267)
 </pre></div>
 </div>
 </div>
@@ -954,6 +980,16 @@ coef (se) = 0.226934 (0.0561918)
 <span class="n">dreg</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">d</span><span class="p">){</span> <span class="nf">cv.glmnet</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">family</span><span class="o">=</span><span class="s">&quot;gaussian&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0</span><span class="p">)</span> <span class="p">}</span> <span class="c1"># ML method = ridge from glmnet </span>
 <span class="n">yreg</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">y</span><span class="p">){</span> <span class="nf">cv.glmnet</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">family</span><span class="o">=</span><span class="s">&quot;gaussian&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0</span><span class="p">)</span> <span class="p">}</span> <span class="c1"># ML method = ridge from glmnet </span>
 <span class="n">DML2.ridge</span> <span class="o">=</span> <span class="nf">DML2.for.PLM</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">dreg</span><span class="p">,</span> <span class="n">yreg</span><span class="p">,</span> <span class="n">nfold</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">clu</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fold: 1  2  3  4  5  6  7  8  9  10  
+coef (se) = 0.200474 (0.0576411)
+fold: 1  2  3  4  5  6  7  8  9  10  
+coef (se) = 0.206117 (0.0574622)
+fold: 1  2  3  4  5  6  7  8  9  10  
+coef (se) = 0.201379 (0.0579066)
 </pre></div>
 </div>
 </div>

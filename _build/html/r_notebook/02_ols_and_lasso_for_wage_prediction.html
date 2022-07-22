@@ -623,13 +623,41 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><style>
-.list-inline {list-style: none; margin:0; padding: 0}
-.list-inline>li {display: inline-block}
-.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
-</style>
-<ol class=list-inline><li>5150</li><li>21</li></ol>
-</div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>package &#39;librarian&#39; successfully unpacked and MD5 sums checked
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>Error in open.connection(structure(4L, class = c(&quot;curl&quot;, &quot;connection&quot;), conn_id = &lt;pointer: 0x00000000000005c6&gt;), : HTTP error 404.
+Traceback:
+
+1. rename(read_csv(&quot;https://github.com/d2cml-ai/14.388_R/raw/main/Data/wage2015_subsample_inference.csv&quot;, 
+ .     show_col_types = F), socl = scl, sohs = shs, sout = so)
+2. read_csv(&quot;https://github.com/d2cml-ai/14.388_R/raw/main/Data/wage2015_subsample_inference.csv&quot;, 
+ .     show_col_types = F)
+3. vroom::vroom(file, delim = &quot;,&quot;, col_names = col_names, col_types = col_types, 
+ .     col_select = {
+ .         {
+ .             col_select
+ .         }
+ .     }, id = id, .name_repair = name_repair, skip = skip, n_max = n_max, 
+ .     na = na, quote = quote, comment = comment, skip_empty_rows = skip_empty_rows, 
+ .     trim_ws = trim_ws, escape_double = TRUE, escape_backslash = FALSE, 
+ .     locale = locale, guess_max = guess_max, show_col_types = show_col_types, 
+ .     progress = progress, altrep = lazy, num_threads = num_threads)
+4. vroom_(file, delim = delim %||% col_types$delim, col_names = col_names, 
+ .     col_types = col_types, id = id, skip = skip, col_select = col_select, 
+ .     name_repair = .name_repair, na = na, quote = quote, trim_ws = trim_ws, 
+ .     escape_double = escape_double, escape_backslash = escape_backslash, 
+ .     comment = comment, skip_empty_rows = skip_empty_rows, locale = locale, 
+ .     guess_max = guess_max, n_max = n_max, altrep = vroom_altrep(altrep), 
+ .     num_threads = num_threads, progress = progress)
+5. (function (con, ...) 
+ . UseMethod(&quot;open&quot;))(structure(4L, class = c(&quot;curl&quot;, &quot;connection&quot;
+ . ), conn_id = &lt;pointer: 0x00000000000005c6&gt;), &quot;rb&quot;)
+6. open.connection(structure(4L, class = c(&quot;curl&quot;, &quot;connection&quot;), conn_id = &lt;pointer: 0x00000000000005c6&gt;), 
+ .     &quot;rb&quot;)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Let’s have a look at the structure of the data.</p>
 <div class="cell docutils container">
@@ -835,8 +863,8 @@ Y = \beta'X+ \epsilon.
 	<tr><td>mw:exp1    </td><td>-0.0270885424</td><td>0.0301188617</td><td>-0.89938798</td><td> 3.684885e-01</td></tr>
 	<tr><td>sout:exp1  </td><td>-0.0078718177</td><td>0.0265857631</td><td>-0.29609147</td><td> 7.671723e-01</td></tr>
 	<tr><td>we:exp1    </td><td>-0.0024976786</td><td>0.0305114339</td><td>-0.08186041</td><td> 9.347609e-01</td></tr>
-	<tr><td>sohs:exp2  </td><td> 0.9029215435</td><td>1.3741164234</td><td> 0.65709246</td><td> 5.111511e-01</td></tr>
-	<tr><td>hsg:exp2   </td><td> 0.1877000514</td><td>0.5146825687</td><td> 0.36469090</td><td> 7.153573e-01</td></tr>
+	<tr><td>sohs:exp2  </td><td> 0.9029215434</td><td>1.3741164234</td><td> 0.65709246</td><td> 5.111511e-01</td></tr>
+	<tr><td>hsg:exp2   </td><td> 0.1877000513</td><td>0.5146825687</td><td> 0.36469090</td><td> 7.153573e-01</td></tr>
 	<tr><td>socl:exp2  </td><td> 0.5113091152</td><td>0.4400571846</td><td> 1.16191516</td><td> 2.453243e-01</td></tr>
 	<tr><td>clg:exp2   </td><td> 0.2030426932</td><td>0.3705629183</td><td> 0.54793041</td><td> 5.837637e-01</td></tr>
 	<tr><td>occ2:exp2  </td><td>-0.0343464030</td><td>0.0186214185</td><td>-1.84445686</td><td> 6.517456e-02</td></tr>
@@ -952,7 +980,7 @@ Residual standard error: 0.5037
 Multiple R-squared:  0.2203
 Adjusted R-squared:  0.2192
 Joint significance test:
- the sup score statistic for joint significance test is  1180 with a p-value of 0.014
+ the sup score statistic for joint significance test is  1180 with a p-value of 0.018
 </pre></div>
 </div>
 </div>
@@ -1020,26 +1048,15 @@ Joint significance test:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R-squared for the basic model:	 0.2320083 
-Adjusted R-squared for the basic model:	 0.2303641
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R-squared for the flexible model:	 0.2452406 
+Adjusted R-squared for the basic model:	 0.2303641R-squared for the flexible model:	 0.2452406 
 Adjusted R-squared for the flexible model:	 0.2378395
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R-squared for the lasso with flexible model:	 0.2202567 
+R-squared for the lasso with flexible model:	 0.2202567 
 Adjusted R-squared for the flexible model:	 0.2191952
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE for the basic model:  0.249809 
+MSE for the basic model:  0.249809 
 Adjusted MSE for the basic model:  0.2503924
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE for the flexible model:  0.2455048 
+MSE for the flexible model:  0.2455048 
 Adjusted MSE for the lasso flexible model:  0.2479604
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE for the lasso flexible model:  0.2536315 
+MSE for the lasso flexible model:  0.2536315 
 Adjusted MSE for the lasso flexible model:  0.2561683
 </pre></div>
 </div>
