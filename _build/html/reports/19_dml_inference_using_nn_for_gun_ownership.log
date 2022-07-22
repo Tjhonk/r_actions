@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# read in dataset', 'data <- read_csv("https://raw.githubusercontent.com/d2cml-ai/14.388_R/main/Data/gun_clean.csv", show_col_types = F) ', '', '', '################## Find Variable Names from the Dataset ###################']
-...
-['# partial out year and county fixed effects from variables in varlist', 'for(i in 1:length(varlist)){', '  form <- as.formula(paste(varlist[i], "~", paste(paste(year,collapse="+"),  paste(fixed,collapse="+"), sep="+")))', '  rdata[, varlist[i]] <- lm(form, data)$residuals', '}']
+# DML with a NN
+set.seed(123)
+DML2.nn = DML2.for.NN(z_nn, d_nn, y_nn, nfold=2, clu, 100, 10)
 -------------------
 

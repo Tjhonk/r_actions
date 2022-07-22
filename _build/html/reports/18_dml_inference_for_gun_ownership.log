@@ -32,8 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['##################### Find Variable Names from Dataset ######################', '', 'varlist <- function (df=NULL,type=c("numeric","factor","character"), pattern="", exclude=NULL) {', '  vars <- character(0)', '  if (any(type %in% "numeric")) {']
+['# DML with cross-validated Lasso:', 'dreg <- function(z,d){ cv.glmnet(z,d,family="gaussian", alpha=1) } # ML method = lasso from glmnet ', 'yreg <- function(z,y){ cv.glmnet(z,y,family="gaussian", alpha=1) } # ML method = lasso from glmnet ', 'DML2.lasso.cv = DML2.for.PLM(z, d, y, dreg, yreg, nfold=10, clu)', '']
 ...
-['# partial out year and county fixed effect from variables in varlist', 'for(i in 1:length(varlist)){', '  form <- as.formula(paste(varlist[i], "~", paste(paste(year,collapse="+"),  paste(fixed,collapse="+"), sep="+")))', '  rdata[, varlist[i]] <- lm(form, data)$residuals', '}']
+['DML2.elnet = DML2.for.PLM(z, d, y, dreg, yreg, nfold=10, clu)', '', 'dreg <- function(z,d){ cv.glmnet(z,d,family="gaussian", alpha=0) } # ML method = ridge from glmnet ', 'yreg <- function(z,y){ cv.glmnet(z,y,family="gaussian", alpha=0) } # ML method = ridge from glmnet ', 'DML2.ridge = DML2.for.PLM(z, d, y, dreg, yreg, nfold=10, clu)']
 -------------------
 
