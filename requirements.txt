@@ -1,6 +1,4 @@
 jupyter-book
 matplotlib
 numpy
-jupyter-book
-ghp-import
-tensorflow
+gph-import

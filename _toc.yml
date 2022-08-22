@@ -2,32 +2,16 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-options:  # The options key will be applied to all chapters, but not sub-sections
-  numbered: True
-chapters:
-  - file: r_notebook/01_r_notebook_linear_model_overfiting
-  - file: r_notebook/02_ols_and_lasso_for_wage_prediction
-  - file: r_notebook/03_ols_and_lasso_for_gender_wage_gap_inference
-  - file: r_notebook/04_r_notebook_some_rct_examples
-  - file: r_notebook/05_r_notebook_analyzing_rct_with_precision
-  - file: r_notebook/06_analyzing_rct_reemployment_experiment
-  - file: r_notebook/07_r_notebook_linear_penalized_regs
-  - file: r_notebook/08_ml_for_wage_prediction
-  - file: r_notebook/09_r_notebook_experiment_on_orthogonal_learning
-  - file: r_notebook/10_double_lasso_for_the_convergence_hypothesis
-  - file: r_notebook/11_heterogenous_wage_effects
-  - file: r_notebook/12_r_colliderbias_hollywood
-  - file: r_notebook/13_deep_neural_networks_for_wage_prediction
-  - file: r_notebook/14_automl_for_wage_prediction
-  - file: r_notebook/15_functional_approximation_by_nn_and_rf
-  - file: r_notebook/16_notebook_dagitty
-  - file: r_notebook/17_notebook_dosearch
-  - file: r_notebook/18_dml_inference_for_gun_ownership
-  - file: r_notebook/19_dml_inference_using_nn_for_gun_ownership
-  - file: r_notebook/20_pm5_401k
-  - file: r_notebook/21_identification_analysis_of_401_k_example_w_dags
-  - file: r_notebook/22_debiased_ml_for_partially_linear_model_in_r
-  - file: r_notebook/23_sensitivity_analysis_with_sensmakr_and_debiased_ml
-  - file: r_notebook/24_debiased_ml_for_partially_linear_iv_model_in_r
-  - file: r_notebook/25_r_weak_iv_experiments
+root: md/intro
+parts:
+- caption: Topics
+  numbered: true
+  chapters:
+  - file: md/1_introduction_1
+  - file: notebooks/2_Introduction_to_Machine_Learning_1
+  - file: notebooks/3_average_treatment_effect_1
+  - file: notebooks/4_heterogeneous_treatment_effect_1
+  - file: notebooks/5_policy_evaluation_1
+  - file: notebooks/6_Policy_Learning_1
+  - file: notebooks/7_LM_forest_RDD_1
+  - file: notebooks/8_MCPanel
