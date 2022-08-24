@@ -40,7 +40,7 @@ jobs:
         with:
           python-version: '3.8'
           cache: 'pip'
-        if: steps.my_cache.outputs.cache.hit != 'true' 
+        # if: steps.my_cache.outputs.cache.hit != 'true' 
       - run: pip install -r requirements.txt
 
       - uses: r-lib/actions/setup-r@v2
