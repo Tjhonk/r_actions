@@ -506,16 +506,50 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">rdd</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;rdd&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">rdd</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">grf</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>Error in library(rdd): there is no package called ‘rdd’
-Traceback:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing package into ‘/home/runner/work/_temp/Library’
+(as ‘lib’ is unspecified)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>also installing the dependencies ‘backports’, ‘broom’, ‘numDeriv’, ‘SparseM’, ‘MatrixModels’, ‘sp’, ‘minqa’, ‘nloptr’, ‘carData’, ‘abind’, ‘pbkrtest’, ‘quantreg’, ‘maptools’, ‘lme4’, ‘car’, ‘AER’, ‘Formula’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: sandwich
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: lmtest
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: zoo
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘zoo’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:base’:
 
-1. library(rdd)
+    as.Date, as.Date.numeric
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: AER
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: car
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: carData
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: survival
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading required package: Formula
 </pre></div>
 </div>
 </div>
@@ -576,13 +610,15 @@ Traceback:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#First we call the necessary librarieslibrary(tidyverse)</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;librarian&quot;</span><span class="p">)</span>
+<span class="n">librarian</span><span class="o">::</span><span class="nf">shelf</span><span class="p">(</span><span class="n">have</span><span class="p">,</span> <span class="n">estimatr</span><span class="p">,</span> <span class="n">rockchalk</span><span class="p">,</span> <span class="n">ggplot2</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">haven</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">estimatr</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">rockchalk</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 
 <span class="c1"># Read in data</span>
-<span class="n">read_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">read_data</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> 
 <span class="p">{</span>
   <span class="n">full_path</span> <span class="o">&lt;-</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;https://raw.github.com/scunning1975/mixtape/master/&quot;</span><span class="p">,</span> 
                      <span class="n">df</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -601,12 +637,51 @@ Traceback:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
-&quot;package &#39;haven&#39; was built under R version 4.2.1&quot;
-Warning message:
-&quot;package &#39;estimatr&#39; was built under R version 4.2.1&quot;
-Warning message:
-&quot;package &#39;rockchalk&#39; was built under R version 4.2.1&quot;
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing package into ‘/home/runner/work/_temp/Library’
+(as ‘lib’ is unspecified)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>also installing the dependency ‘BiocManager’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  These packages will be installed:
+
+  &#39;have&#39;, &#39;estimatr&#39;, &#39;rockchalk&#39;
+
+  It may take some time.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>also installing the dependencies ‘openxlsx’, ‘RUnit’, ‘kutils’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in stock(..., lib = lib, update_all = update_all, quiet = quiet, :
+“
+  These packages failed to install:
+
+  &#39;have&#39;
+
+  Check the spelling and capitalisation of the names.
+
+  Are they Bioconductor packages? If so, please install Bioconductor
+  (BiocManager and BiocBase).
+
+  Are they from GitHub? If so, please supply both the GitHub username
+  and package name, e.g. DesiQuintans/librarian”
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in librarian::shelf(have, estimatr, rockchalk, ggplot2):
+“
+  These packages are not installed, so they were not attached:
+
+  &#39;have&#39;
+
+  Did they fail to install? Are they spelled correctly?”
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>Error in library(haven): there is no package called ‘haven’
+Traceback:
+
+1. library(haven)
 </pre></div>
 </div>
 </div>
