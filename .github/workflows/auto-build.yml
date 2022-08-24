@@ -71,20 +71,20 @@ jobs:
         run: ghp-import -n -p -f _build/html
         shell: bash
 
-      - id: commit
-        name: Commit files
-        run:
-          git config --local user.name action-user
+      # - id: commit
+      #   name: Commit files
+      #   run:
+      #     git config --local user.name action-user
 
-          git config --local user.email "actions@github.com"
+      #     git config --local user.email "actions@github.com"
 
-          git add -A
+      #     git add -A
           
-          git commit -m "update files"
+      #     git commit -m "update files"
 
-          git push origin ggplot2
+      #     git push origin ggplot2
 
-        env:
-          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+        # env:
+        #   REPO_KEY: ${{secrets.GITHUB_TOKEN}}
 
-          username: github-actions
+        #   username: github-actions
