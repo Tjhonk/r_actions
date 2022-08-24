@@ -17,14 +17,36 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-library(rdd)
-library(grf)
+#First we call the necessary librarieslibrary(tidyverse)
+install.packages("librarian")
+librarian::shelf(have, estimatr, rockchalk, ggplot2)
+library(haven)
+library(estimatr)
+library(rockchalk)
+library(ggplot2)
+
+# Read in data
+read_data <- function(df) 
+{
+  full_path <- paste("https://raw.github.com/scunning1975/mixtape/master/", 
+                     df, sep = "")
+  df <- read_dta(full_path)
+  return(df)
+}
+
+data <- read_data("lmb-data.dta")
+
+# Define variables
+outcome = "score"
+covariates <- c("age", "realincome", "sex", "militaryservice", "secondaryeduc")
+running = "lagdemvoteshare"
+treatment = "W"
 ------------------
 
-Error in library(rdd): there is no package called ‘rdd’
+Error in library(haven): there is no package called ‘haven’
 Traceback:
 
-1. library(rdd)
-ERROR: Error in library(rdd): there is no package called ‘rdd’
+1. library(haven)
+ERROR: Error in library(haven): there is no package called ‘haven’
 
 

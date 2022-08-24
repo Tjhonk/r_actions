@@ -1,6 +1,7 @@
 # Deleting all current variables
 rm(list=ls())
 
+install.packages("rdd")
 library(rdd)
 library(grf)
 
@@ -45,13 +46,15 @@ points(X[subset, 1], tau[subset], col = "red", cex = 0.1)
 #>     as.Date, as.Date.numeric# }
 
 #First we call the necessary librarieslibrary(tidyverse)
+install.packages("librarian")
+librarian::shelf(have, estimatr, rockchalk, ggplot2)
 library(haven)
 library(estimatr)
 library(rockchalk)
 library(ggplot2)
 
 # Read in data
-read_data <- function(df)
+read_data <- function(df) 
 {
   full_path <- paste("https://raw.github.com/scunning1975/mixtape/master/", 
                      df, sep = "")
