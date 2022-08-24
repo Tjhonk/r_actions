@@ -11,11 +11,10 @@ install.packages("remotes")
 
 remotes::install_github("susanathey/causalTree")
 
-install.packages("devtools")
-library(devtools)
-install_github("susanathey/MCPanel")
+# install.packages("devtools")
+remotes:;install_github("susanathey/MCPanel")
 
-devtools::install_github("IRkernel/IRkernel")
+remotes::install_github("IRkernel/IRkernel")
 
 IRkernel::installspec()
 
